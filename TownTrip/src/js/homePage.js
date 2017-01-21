@@ -2,13 +2,60 @@ $(function() {
 	$('#slidesbigRoomByRiver').slidesjs({
         width: 50,
         height: 30,
+		 navigation: {
+		 active: false,
+			// [boolean] Generates next and previous buttons.
+			// You can set to false and use your own buttons.
+			// User defined buttons must have the following:
+			// previous button: class="slidesjs-previous slidesjs-navigation"
+			// next button: class="slidesjs-next slidesjs-navigation"
+		  effect: "slide"
+			// [string] Can be either "slide" or "fade".
+		},
+		pagination: {
+		  active: true,
+			// [boolean] Create pagination items.
+			// You cannot use your own pagination. Sorry.
+		  effect: "slide"
+			// [string] Can be either "slide" or "fade".
+		},
         play: {
           active: true,
-          auto: true,
-          interval: 2000,
-          swap: true
-        }
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+		  effect: "slide",
+			// [string] Can be either "slide" or "fade".
+		  interval: 3000,
+			// [number] Time spent on each slide in milliseconds.
+		  auto: true,
+			// [boolean] Start playing the slideshow on load.
+		  swap: true,
+			// [boolean] show/hide stop and play buttons
+		  pauseOnHover: true,
+			// [boolean] pause a playing slideshow on hover
+		  restartDelay: 1000
+			// [number] restart delay on inactive slideshow
+        },
+		callback: {
+		  loaded: function(number) {
+			// Do something awesome!
+			// Passes start slide number
+		  },
+		  start: function(number) {
+			// Do something awesome!
+			// Passes slide number at start of animation
+		  },
+		  complete: function(number) {
+			// Do something awesome!
+			// Passes slide number at end of animation
+		  }
+		}
       });
+	  
+	$('.slidesjs-pagination-item a').click(function(){
+		//alert('test');
+		$('.slidesjs-play').click();
+	}); 
 	  
 	$('.room_name').click(function(){
 		$(".room_name").removeClass("btn-selected");
@@ -38,7 +85,7 @@ $(function() {
 				type: 1,
 				title: 'layer弹层组件官网',
 				fix: false,
-				maxmin: true,
+				maxmin: false,
 				shadeClose: true,
 				area: ['1100px', '600px'],
 				content: bookingDivHtml,
