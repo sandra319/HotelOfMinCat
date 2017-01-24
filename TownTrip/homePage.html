@@ -41,7 +41,7 @@
        <ul class="list-inline intro-social-buttons"> 
         <li> <a href="#booking" class="btn btn-default btn-lg"><i class="fa fa-send fa-fw"></i> <span class="network-name">客栈预定</span></a> </li> 
         <li> <a href="#travelTips" class="btn btn-default btn-lg"><i class="fa fa-tv fa-fw"></i> <span class="network-name">查看攻略</span></a> </li> 
-        <li> <a href="#experienceLife" class="btn btn-default btn-lg"><i class="fa fa-line-chart fa-fw"></i> <span class="network-name">体验当地生活</span></a> </li> 
+        <li> <a href="#experienceLife" class="btn btn-default btn-lg"><i class="fa fa-tv fa-fw"></i> <span class="network-name">体验当地生活</span></a> </li> 
        </ul> 
       </div> 
      </div> 
@@ -119,12 +119,14 @@
       <p></p> 
       <br /> 
       <ul class="list-inline intro-social-buttons"> 
-       <li> <a href="#join-group" class="btn btn-default btn-lg"><i class="fa fa-qq fa-fw"></i>／<i class="fa fa-wechat fa-fw"></i> <span class="network-name">立即查看</span></a> </li> 
+       <li> 
+		<a href="./travelTips.html" class="btn btn-default btn-lg"><span class="network-name">立即查看</span></a> 
+		</li> 
       </ul> 
      </div> 
      <div class="col-lg-5 col-sm-pull-6  col-sm-6"> 
       <br /> 
-      <img class="img-responsive" src="http://source.wublogpush.com/static%2Fimg%2Fiphone6s-live.png" alt="" /> 
+      <img id="travelTipsImg" class="img-responsive img-prompt-layer" src="src\img\pulicEnviroment\夜景太美.jpg" alt="" /> 
      </div> 
     </div> 
    </div> 
@@ -146,12 +148,12 @@
       <p></p> 
       <br /> 
       <ul class="list-inline intro-social-buttons"> 
-       <li> <a href="#join-group" class="btn btn-default btn-lg"><i class="fa fa-qq fa-fw"></i>／<i class="fa fa-wechat fa-fw"></i> <span class="network-name">立即查看</span></a> </li> 
+       <li> <a href="./experienceLife.html" class="btn btn-default btn-lg"><span class="network-name">立即查看</span></a> </li> 
       </ul> 
      </div> 
      <div class="col-lg-5 col-sm-pull-6  col-sm-6"> 
       <br /> 
-      <img class="img-responsive" src="http://source.wublogpush.com/static%2Fimg%2Fiphone6s-live.png" alt="" /> 
+      <img id="experienceLifeImg" class="img-responsive img-prompt-layer" src="src\img\pulicEnviroment\一楼阳台外景.jpg" alt="" /> 
      </div> 
     </div> 
    </div> 
@@ -173,7 +175,7 @@
        <input type="email" id="txtEmail" name="email" class="form-control input-lg" placeholder="电子邮箱" required="" /> 
       </div> 
       <br /> 
-      <button type="button" id="btn_subscribe" class="btn btn-lg btn-primary">立即订阅</button> 
+      <button type="button" id="btn_subscribe" class="btn btn-lg btn-primary" onclick="alert('订阅成功')">立即订阅</button> 
      </form> 
      <br /> 
      <div> 
@@ -195,12 +197,12 @@
      <hr class="group-heading-spacer" /> 
      <div> 
       <h3 class="section-heading3"><i class="fa fa-wechat fa-fw"></i> 「微信直播群」</h3> 
-      <p style="line-height:2;font-size:16px"> 2017年，微信直播群再次开放<br /> 扫码加「小王子」微信，备注「看直播」<br /> 验证通过后，请严格按照二维码下的步骤操作<br /> <img src="http://source.wublogpush.com/prince-wechat.jpg" alt="微信直播群二维码" /> </p>
-      <p style="line-height:2;font-size:16px"> 入群步骤：<br /> 1、不要设置朋友圈对小王子不可见<br /> 2、小王子审核您的朋友圈，以防发广告的入群<br /> 3、审核通过后，会邀您进群<br /> 4、进群后，不得发言，只看直播 </p> 
+      <p style="line-height:2;font-size:16px"> 2017年，微信直播群再次开放<br /> 扫码加「小辣喵」微信，备注「看直播」<br /> 验证通过后，请严格按照二维码下的步骤操作<br /> <img src="http://source.wublogpush.com/prince-wechat.jpg" alt="微信直播群二维码" /> </p>
+      <p style="line-height:2;font-size:16px"> 入群步骤：<br /> 1、不要设置朋友圈对小辣喵不可见<br /> 2、小辣喵审核您的朋友圈，以防发广告的入群<br /> 3、审核通过后，会邀您进群<br /> 4、进群后，不得发言，只看直播 </p> 
       <br /> 
       <hr class="group-mid-heading-spacer" /> 
       <h3 class="section-heading3"><i class="fa fa-qq fa-fw"></i>「QQ 直播群」</h3> 
-      <p style="line-height:2;font-size:16px;margin-bottom:15px"> 小王子推送直播二群<br /> 524408466<br />
+      <p style="line-height:2;font-size:16px;margin-bottom:15px"> 小辣喵推送直播二群<br /> 524408466<br />
        <!--
       请搜索上面的群号 或 <br>
       点击下方的按钮申请入群<br>
@@ -225,9 +227,9 @@
      <div class="col-lg-6"> 
       <ul class="list-inline banner-social-buttons"> 
        <li> <a href="http://weibo.com/wublogpush" class="btn btn-default btn-lg"><i class="fa fa-weibo fa-fw"></i> <span class="network-name">官方微博</span></a> </li> 
-       <li> <a href="/about#comment" class="btn btn-default btn-lg"><i class="fa fa-comment fa-fw"></i> <span class="network-name">留言反馈</span></a> </li> 
-       <li> <a href="mailto:wu@batch.wublogpush.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">邮件交流</span></a> </li> 
-       <li> <a href="/donate" class="btn btn-default btn-lg"><i class="fa fa-gift fa-fw"></i> <span class="network-name">赞助支持</span></a> </li> 
+       <li> <a href="" onclick="alert('暂未开通')" class="btn btn-default btn-lg"><i class="fa fa-comment fa-fw"></i> <span class="network-name">留言反馈</span></a> </li> 
+       <li> <a href="mailto:914592405@qq.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">邮件交流</span></a> </li> 
+       <li> <a href="" onclick="alert('暂未开通')"  class="btn btn-default btn-lg"><i class="fa fa-gift fa-fw"></i> <span class="network-name">赞助支持</span></a> </li> 
       </ul> 
      </div> 
     </div> 
@@ -236,28 +238,20 @@
   </div> 
   <!-- /.banner --> 
   <div class="container" style="display:none" id="bookingModal"> 
-	<div>
-	  <li style="line-height:2.0;font-size:16px">
-	  name: <input type="text" id="name"  value="张三">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  phone: <input type="text" id="phone" value="13812345678">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  开始时间: <input type="text" id="startdate" value="2017/1/15">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  几晚: <input type="text" id="howlong" value="2">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  price: <input type="text" id="price" value="499">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  room: <input type="text" id="room" value="202">
-	  </li>
-	  <li style="line-height:2.0;font-size:16px">
-	  note: <input type="text" id="notes" value="谢谢">
-	  </li>
+	<div >
+		<div class="col-lg-6 col-sm-6">姓名</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="name"  value="张三"></div>
+		
+		<div class="col-lg-6 col-sm-6">电话</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="phone" value="13812345678"></div>
+		<div class="col-lg-6 col-sm-6">入住时间</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="startdate" value="2017/1/15"></div>
+		<div class="col-lg-6 col-sm-6">入住天数</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="howlong" value="2"></div>
+		<div class="col-lg-6 col-sm-6">价格</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="price" value="499"  readonly></div>
+		<div class="col-lg-6 col-sm-6">房间</div>
+		<div class="col-lg-6 col-sm-6"><input type="text" id="room" value="202"></div>
 	</div>
 	
   </div> 
@@ -269,13 +263,13 @@
       <ul class="list-inline"> 
        <li> <a href="/">首页</a> </li> 
        <li class="footer-menu-divider">⋅</li> 
-       <li> <a href="/FAQ">常见问题</a> </li> 
+       <li> <a href="/">常见问题</a> </li> 
        <li class="footer-menu-divider">⋅</li> 
-       <li> <a href="/about#comment">留言反馈</a> </li> 
+       <li> <a href="/">留言反馈</a> </li> 
        <li class="footer-menu-divider">⋅</li> 
-       <li> <a href="/about">关于</a> </li> 
+       <li> <a href="/">关于</a> </li> 
       </ul> 
-      <p class="copyright text-muted small">Copyright &copy; 2015-2016 小王子推送 | 苏ICP备15049508号 </script> 
+      <p class="copyright text-muted small">Copyright &copy; 2015-2016 小辣喵推送 | 苏ICP备15049508号 </script> 
        <noscript>
         <a href="http://www.51.la/?18957446" target="_blank"><img alt="我要啦免费统计" src="http://img.users.51.la/18957446.asp" style="border:none" /></a>
        </noscript> </p> 
@@ -299,7 +293,6 @@
 </script> 
   <!-- Custom CSS --> 
   <script>$("nav.navbar-fixed-top").autoHidingNavbar();</script> 
-  <script src="http://source.wublogpush.com/static%2Fjs%2Fscript.js"></script> 
   <!-- Custom Fonts --> 
   <link href="src/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> 
   <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />   

@@ -105,6 +105,36 @@ $(function() {
 		});
 	}
 	
+	var clickNormalPicFunc = function (event) {
+	    var imgElement = event.target;
+	    var imgElementParent = imgElement.parentNode;
+	    imgElement.style = 'width:900px;height:600px;';
+	    var imgPath = imgElement.src;
+	    var imgPathSrcIndex = imgPath.indexOf('src/img/room/');
+	    var imgPathJpgIndex = imgPath.indexOf('.jpg');
+	    var imgRoomName = imgPath.substring(imgPathSrcIndex + 13, imgPathJpgIndex - 2);
+	    var divElement = $('<div></div>').html($(imgElement)).html();
+	    layer.ready(function () {
+	        //官网欢迎页
+	        layer.open({
+	            type: 1,
+	            title: false,
+	            closeBtn: 0,
+	            fix: false,
+	            maxmin: false,
+	            shadeClose: true,
+	            area: ['900px', '600px'],
+	            content: divElement,
+	            end: function () {
+	                imgElement.style = '';
+	                imgElementParent.appendChild(imgElement);
+	                //rebuildPicSliderFunc(imgRoomName);
+	                //$('#slidesPic img').click(clickSlidePicFunc);
+	            }
+	        });
+	    });
+	}
+
 	function sleep(n) { //n表示的毫秒数
 		var start = new Date().getTime();
 		while (true) if (new Date().getTime() - start > n) break;
@@ -169,7 +199,8 @@ $(function() {
 	}); 
 	
 	$('#slidesPic img').click(clickSlidePicFunc);
-	  
+	$('.img-prompt-layer').click(clickNormalPicFunc);
+
 	$('.room_name').click(function(){
 		$(".room_name").removeClass("btn-selected");
 		$(this).addClass("btn-selected");
@@ -252,11 +283,11 @@ $(function() {
 			  //官网欢迎页
 			  layer.open({
 				type: 1,
-				title: 'layer弹层组件官网',
+				title: '客房预定',
 				fix: false,
 				maxmin: false,
 				shadeClose: true,
-				area: ['1100px', '600px'],
+				area: ['600px', '500px'],
 				content: bookingDivHtml,
 				btn: ['提交订单', '残忍离去'],
 				yes: function(){
